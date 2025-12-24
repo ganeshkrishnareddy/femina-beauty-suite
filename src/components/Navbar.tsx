@@ -41,7 +41,7 @@ const Navbar = () => {
       <div className="container-wide">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Logo />
+          <Logo variant={isScrolled ? 'default' : 'light'} />
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
@@ -50,9 +50,13 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 className={`font-body text-sm font-medium link-underline transition-colors ${
-                  location.pathname === link.path
-                    ? 'text-primary'
-                    : 'text-foreground/80 hover:text-primary'
+                  isScrolled 
+                    ? location.pathname === link.path
+                      ? 'text-primary'
+                      : 'text-foreground/80 hover:text-primary'
+                    : location.pathname === link.path
+                      ? 'text-gold'
+                      : 'text-background/90 hover:text-gold'
                 }`}
               >
                 {link.name}
@@ -66,11 +70,14 @@ const Navbar = () => {
               href="https://instagram.com/feminamakeover1"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground/70 hover:text-primary transition-colors"
+              className={`transition-colors ${isScrolled ? 'text-foreground/70 hover:text-primary' : 'text-background/80 hover:text-gold'}`}
             >
               <Instagram className="w-5 h-5" />
             </a>
-            <a href="tel:+919892657380" className="text-foreground/70 hover:text-primary transition-colors">
+            <a 
+              href="tel:+919892657380" 
+              className={`transition-colors ${isScrolled ? 'text-foreground/70 hover:text-primary' : 'text-background/80 hover:text-gold'}`}
+            >
               <Phone className="w-5 h-5" />
             </a>
             <Link to="/booking">
@@ -83,7 +90,7 @@ const Navbar = () => {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-foreground p-2"
+            className={`lg:hidden p-2 ${isScrolled ? 'text-foreground' : 'text-background'}`}
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
