@@ -115,10 +115,21 @@ const Footer = () => {
             <p className="text-background/50 font-body text-sm text-center md:text-left">
               © {new Date().getFullYear()} Femina Beauty Parlour & Academy. All rights reserved.
             </p>
-            <div className="flex items-center gap-2">
-              <span className="text-background/50 font-body text-sm">⭐ 4.7</span>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <span className="text-background/50 font-body text-sm">⭐ 4.7</span>
+                <span className="text-background/30">|</span>
+                <span className="text-background/50 font-body text-sm">237+ Reviews</span>
+              </div>
               <span className="text-background/30">|</span>
-              <span className="text-background/50 font-body text-sm">237+ Reviews</span>
+              <a 
+                href="https://progvision.netlify.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-background/50 hover:text-primary transition-colors font-body text-sm"
+              >
+                Developed by ProgVision
+              </a>
             </div>
           </div>
         </div>

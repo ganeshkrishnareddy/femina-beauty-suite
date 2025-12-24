@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Sparkles } from 'lucide-react';
 
 interface LogoProps {
@@ -7,9 +7,16 @@ interface LogoProps {
 
 const Logo = ({ variant = 'default' }: LogoProps) => {
   const isLight = variant === 'light';
+  const navigate = useNavigate();
+  
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate('/');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   
   return (
-    <Link to="/" className="flex items-center gap-3 group">
+    <Link to="/" onClick={handleClick} className="flex items-center gap-3 group">
       {/* Icon mark */}
       <div className="relative w-11 h-11 md:w-12 md:h-12 flex items-center justify-center">
         {/* Gradient background */}
