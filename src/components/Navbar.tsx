@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Logo from '@/components/Logo';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -40,14 +41,7 @@ const Navbar = () => {
       <div className="container-wide">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="relative">
-              <span className="font-display text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
-                Femina
-              </span>
-              <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-gold scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-            </div>
-          </Link>
+          <Logo />
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
