@@ -13,6 +13,8 @@ import Academy from "./pages/Academy";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Booking from "./pages/Booking";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +34,8 @@ const App = () => (
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

@@ -112,9 +112,26 @@ const Footer = () => {
       <div className="border-t border-background/10">
         <div className="container-wide py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-background/50 font-body text-sm text-center md:text-left">
-              © {new Date().getFullYear()} Femina Beauty Parlour & Academy. All rights reserved.
-            </p>
+            <div className="flex flex-col md:flex-row items-center gap-4">
+              <p className="text-background/50 font-body text-sm text-center md:text-left">
+                © {new Date().getFullYear()} Femina Beauty Parlour & Academy. All rights reserved.
+              </p>
+              <div className="flex items-center gap-3">
+                <Link 
+                  to="/privacy-policy" 
+                  className="text-background/50 hover:text-primary transition-colors font-body text-sm"
+                >
+                  Privacy Policy
+                </Link>
+                <span className="text-background/30">|</span>
+                <Link 
+                  to="/terms-conditions" 
+                  className="text-background/50 hover:text-primary transition-colors font-body text-sm"
+                >
+                  Terms & Conditions
+                </Link>
+              </div>
+            </div>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <span className="text-background/50 font-body text-sm">⭐ 4.7</span>
