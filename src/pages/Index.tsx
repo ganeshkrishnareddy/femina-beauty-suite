@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import SectionHeading from '@/components/SectionHeading';
 import ServiceCard from '@/components/ServiceCard';
 import TestimonialCard from '@/components/TestimonialCard';
+import InstagramFeed from '@/components/InstagramFeed';
 import heroBridal from '@/assets/hero-bridal.jpg';
 import gallery1 from '@/assets/gallery-1.jpg';
 import gallery2 from '@/assets/gallery-2.jpg';
@@ -337,6 +338,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Instagram Feed */}
+      <InstagramFeed />
 
       {/* CTA Section */}
       <section className="py-20 bg-foreground relative overflow-hidden">
