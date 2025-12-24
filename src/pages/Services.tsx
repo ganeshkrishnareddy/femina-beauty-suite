@@ -3,9 +3,14 @@ import { Link } from 'react-router-dom';
 import { Heart, Sparkles, Scissors, Palette, Droplets, Sun, Eye, Flower2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import SectionHeading from '@/components/SectionHeading';
-import gallery1 from '@/assets/gallery-1.jpg';
-import gallery2 from '@/assets/gallery-2.jpg';
-import gallery3 from '@/assets/gallery-3.jpg';
+import serviceBridal from '@/assets/service-bridal.jpg';
+import serviceParty from '@/assets/service-party.jpg';
+import serviceHair from '@/assets/service-hair.jpg';
+import serviceNails from '@/assets/service-nails.jpg';
+import serviceSkin from '@/assets/service-skin.jpg';
+import serviceFacial from '@/assets/service-facial.jpg';
+import serviceEye from '@/assets/service-eye.jpg';
+import serviceBody from '@/assets/service-body.jpg';
 
 const services = [
   {
@@ -13,56 +18,56 @@ const services = [
     description: 'Your wedding day deserves perfection. Our signature bridal packages include HD makeup, airbrush techniques, and complete styling for your special day.',
     icon: Heart,
     features: ['HD & Airbrush Makeup', 'Saree/Lehenga Draping', 'Complete Styling', 'Touch-up Kit'],
-    image: gallery1,
+    image: serviceBridal,
   },
   {
     title: 'Party Makeup',
     description: 'Look stunning for any occasion with our glamorous party makeup looks, from subtle elegance to bold and dramatic.',
     icon: Sparkles,
     features: ['Evening Glam', 'Cocktail Look', 'Reception Makeup', 'Photo Shoot Ready'],
-    image: gallery1,
+    image: serviceParty,
   },
   {
     title: 'Hair Styling',
     description: 'Expert cuts, coloring, and styling services for all hair types. From trendy cuts to intricate bridal hairstyles.',
     icon: Scissors,
     features: ['Haircuts & Styling', 'Hair Coloring', 'Bridal Updo', 'Hair Treatments'],
-    image: gallery2,
+    image: serviceHair,
   },
   {
     title: 'Nail Art',
     description: 'Express yourself with creative nail designs. From classic manicures to elaborate nail art and gel extensions.',
     icon: Palette,
     features: ['Manicure & Pedicure', 'Gel Extensions', 'Nail Art', 'French Tips'],
-    image: gallery3,
+    image: serviceNails,
   },
   {
     title: 'Skin Treatments',
     description: 'Rejuvenate your skin with our professional facial treatments and skincare solutions.',
     icon: Droplets,
     features: ['Deep Cleansing Facial', 'Anti-Aging Treatment', 'Gold Facial', 'Hydra Facial'],
-    image: gallery1,
+    image: serviceSkin,
   },
   {
     title: 'Cleanup & Facials',
     description: 'Regular skincare maintenance with our range of cleanup and facial services for glowing skin.',
     icon: Sun,
     features: ['Basic Cleanup', 'Fruit Facial', 'Pearl Facial', 'Diamond Facial'],
-    image: gallery2,
+    image: serviceFacial,
   },
   {
     title: 'Eye Treatments',
     description: 'Enhance your eyes with professional threading, tinting, and eyelash extensions.',
     icon: Eye,
     features: ['Eyebrow Threading', 'Eyelash Extensions', 'Brow Tinting', 'Eye Makeup'],
-    image: gallery3,
+    image: serviceEye,
   },
   {
     title: 'Body Treatments',
     description: 'Pamper yourself with our luxurious body treatments including waxing, massages, and body polishing.',
     icon: Flower2,
     features: ['Full Body Wax', 'Body Polish', 'Spa Massage', 'Bleach & D-tan'],
-    image: gallery1,
+    image: serviceBody,
   },
 ];
 
